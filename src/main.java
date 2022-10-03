@@ -4,7 +4,7 @@ public class main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in); //creates a new scanner
-        System.out.print("What is the total bill?"); //bill info
+        System.out.print("What is the total bill?"); //billing info
         double totalBill = input.nextDouble();
         System.out.print("What is the tip percentage as a whole number (without % symbol)?"); //percent info
         double tipPercent = input.nextDouble();
@@ -16,11 +16,10 @@ public class main
         double totalPerPerson = totalBill/numberOfPeople; // calculates how much each person pays
         double tipPerPerson = totalTip/numberOfPeople;
 
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); //receipt
-        System.out.printf("Total Tip Amount: $%.2f\n", totalTip);
+        //%.2f\n formats the variables into 2 decimal places 
+        System.out.printf("Total Tip Amount: $%.2f\n", totalTip); //receipt
         System.out.printf("Total Bill Including Tip: $%.2f\n", totalBill);
         System.out.printf("Tip Per Person: $%.2f\n", tipPerPerson);
         System.out.printf("Total Per Person: $%.2f\n", totalPerPerson);
-        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
 }
